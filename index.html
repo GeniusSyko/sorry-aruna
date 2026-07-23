@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Aruna ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ffb6c1,#ffe4e1);
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+animation:fade 2s infinite alternate;
+}
+
+@keyframes fade{
+from{opacity:0.5;}
+to{opacity:1;}
+}
+
+.scroll{
+margin-top:20px;
+font-size:20px;
+animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+50%{transform:translateY(10px);}
+}
+
+.section{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.box{
+background:white;
+color:black;
+padding:20px 40px;
+border-radius:20px;
+cursor:pointer;
+font-size:25px;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.box:hover{
+transform:scale(1.08);
+}
+
+.popup{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+color:black;
+padding:30px;
+border-radius:20px;
+text-align:center;
+width:320px;
+box-shadow:0 0 30px rgba(0,0,0,.5);
+z-index:100;
+animation:pop .5s;
+}
+
+@keyframes pop{
+from{
+transform:translate(-50%,-50%) scale(.5);
+opacity:0;
+}
+to{
+transform:translate(-50%,-50%) scale(1);
+opacity:1;
+}
+}
+
+img{
+width:220px;
+border-radius:20px;
+margin-top:15px;
+}
+
+video{
+width:250px;
+border-radius:20px;
+margin-top:15px;
+}
+
+button{
+padding:10px 20px;
+margin-top:15px;
+border:none;
+background:#ff4081;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+<h1>💖 Sorry Aruna 💖</h1>
+<p class="scroll">⬇ Scroll Down ⬇</p>
+</div>
+
+<div class="section">
+<div class="box" onclick="openPopup()">
+Tap Here ❤️
+</div>
+</div>
+
+<div class="popup" id="popup">
+
+<h2>I'm Really Sorry Aruna ❤️</h2>
+
+<p>
+Mujhse galti ho gayi...
+Please mujhe maaf kar do.
+Tum meri life me bahut important ho.🥺
+</p>
+
+<img src="aruna.jpg">
+
+<br>
+
+<video controls>
+<source src="aruna.mp4" type="video/mp4">
+</video>
+
+<br>
+
+<button onclick="closePopup()">Close ❤️</button>
+
+</div>
+
+<script>
+
+function openPopup(){
+
+document.getElementById("popup").style.display="block";
+
+setTimeout(function(){
+
+alert("🥺 Sorry Aruna ❤️ Please Forgive Me 🥺");
+
+},300);
+
+}
+
+function closePopup(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
