@@ -7,119 +7,160 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#ffb6c1,#ffe4e1);
-color:white;
-overflow-x:hidden;
+    background:linear-gradient(135deg,#ffb6c1,#ffe4e1);
+    color:white;
+    overflow-x:hidden;
 }
 
 .hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
 }
 
 .hero h1{
-font-size:50px;
-animation:fade 2s infinite alternate;
+    font-size:clamp(32px,8vw,50px);
+    animation:fade 2s infinite alternate;
 }
 
 @keyframes fade{
-from{opacity:0.5;}
-to{opacity:1;}
+    from{opacity:.5;}
+    to{opacity:1;}
 }
 
 .scroll{
-margin-top:20px;
-font-size:20px;
-animation:bounce 1s infinite;
+    margin-top:20px;
+    font-size:20px;
+    animation:bounce 1s infinite;
 }
 
 @keyframes bounce{
-50%{transform:translateY(10px);}
+    50%{transform:translateY(10px);}
 }
 
 .section{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
 }
 
 .box{
-background:white;
-color:black;
-padding:20px 40px;
-border-radius:20px;
-cursor:pointer;
-font-size:25px;
-box-shadow:0 0 20px rgba(0,0,0,.3);
-transition:.3s;
+    background:white;
+    color:black;
+    padding:18px 30px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:22px;
+    text-align:center;
+    width:90%;
+    max-width:300px;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+    transition:.3s;
 }
 
 .box:hover{
-transform:scale(1.08);
+    transform:scale(1.08);
 }
 
 .popup{
-display:none;
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:white;
-color:black;
-padding:30px;
-border-radius:20px;
-text-align:center;
-width:320px;
-box-shadow:0 0 30px rgba(0,0,0,.5);
-z-index:100;
-animation:pop .5s;
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    width:90%;
+    max-width:360px;
+    max-height:90vh;
+    overflow-y:auto;
+    box-shadow:0 0 30px rgba(0,0,0,.5);
+    z-index:100;
+    animation:pop .5s;
 }
 
 @keyframes pop{
-from{
-transform:translate(-50%,-50%) scale(.5);
-opacity:0;
-}
-to{
-transform:translate(-50%,-50%) scale(1);
-opacity:1;
-}
+    from{
+        transform:translate(-50%,-50%) scale(.5);
+        opacity:0;
+    }
+    to{
+        transform:translate(-50%,-50%) scale(1);
+        opacity:1;
+    }
 }
 
 img{
-width:220px;
-border-radius:20px;
-margin-top:15px;
+    width:100%;
+    max-width:220px;
+    height:auto;
+    border-radius:20px;
+    margin-top:15px;
 }
 
 video{
-width:250px;
-border-radius:20px;
-margin-top:15px;
+    width:100%;
+    max-width:250px;
+    height:auto;
+    border-radius:20px;
+    margin-top:15px;
 }
 
 button{
-padding:10px 20px;
-margin-top:15px;
-border:none;
-background:#ff4081;
-color:white;
-border-radius:10px;
-cursor:pointer;
+    padding:12px 22px;
+    margin-top:15px;
+    border:none;
+    background:#ff4081;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#e91e63;
+}
+
+@media (max-width:768px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.scroll{
+    font-size:18px;
+}
+
+.box{
+    font-size:20px;
+}
+
+.popup h2{
+    font-size:24px;
+}
+
+.popup p{
+    font-size:16px;
+    line-height:1.6;
+}
+
 }
 </style>
 
@@ -152,12 +193,13 @@ Please mujhe maaf kar de. 🙏🥹<br><br>
 I Promise, aage se gusse me kabhi aisi baat nahi bolunga. ❤️
 </p>
 
-<img src="aruna.png">
+<img src="aruna.png" alt="Aruna">
 
 <br>
 
 <video controls>
 <source src="0618(1).mp4" type="video/mp4">
+Your browser does not support the video tag.
 </video>
 
 <br>
@@ -167,25 +209,17 @@ I Promise, aage se gusse me kabhi aisi baat nahi bolunga. ❤️
 </div>
 
 <script>
-
 function openPopup(){
+    document.getElementById("popup").style.display="block";
 
-document.getElementById("popup").style.display="block";
-
-setTimeout(function(){
-
-alert("🥺 Sorry Aruna ❤️ Please Forgive Me 🥺");
-
-},300);
-
+    setTimeout(function(){
+        alert("🥺 Sorry Aruna ❤️ Please Forgive Me 🥺");
+    },300);
 }
 
 function closePopup(){
-
-document.getElementById("popup").style.display="none";
-
+    document.getElementById("popup").style.display="none";
 }
-
 </script>
 
 </body>
