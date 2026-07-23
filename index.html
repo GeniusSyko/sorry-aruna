@@ -1,5 +1,3 @@
-Yeh raha aapka update kiya hua code. Maine body aur .popup class mein text color ko white (#fff) se black (#000) kar diya hai, jisse saara main font black dikhega. Button ka text maine white hi rakha hai taaki pink background par woh achha dikhe.
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +8,7 @@ Yeh raha aapka update kiya hua code. Maine body aur .popup class mein text color
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{
 background:linear-gradient(135deg,#ff9eb5,#ffdbe7,#fff0f5);
-min-height:100vh;overflow-x:hidden;color:#000} /* Text color changed to black */
+min-height:100vh;overflow-x:hidden;color:#000}
 .hearts span{position:fixed;bottom:-40px;font-size:24px;animation:up 10s linear infinite;opacity:.7}
 .hearts span:nth-child(1){left:10%}.hearts span:nth-child(2){left:30%;animation-duration:8s}
 .hearts span:nth-child(3){left:50%;animation-duration:12s}
@@ -22,9 +20,9 @@ min-height:100vh;overflow-x:hidden;color:#000} /* Text color changed to black */
 .scroll{margin-top:20px;animation:b 1s infinite}
 @keyframes b{50%{transform:translateY(8px)}}
 .box{padding:18px 28px;background:rgba(255,255,255,.25);backdrop-filter:blur(10px);border-radius:18px;cursor:pointer;font-size:22px}
-.popup{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:92%;max-width:380px;max-height:90vh;overflow:auto;background:rgba(255,255,255,.5);backdrop-filter:blur(16px);padding:20px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.3);color:#000} /* Text color changed to black */
+.popup{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:92%;max-width:380px;max-height:90vh;overflow:auto;background:rgba(255,255,255,.5);backdrop-filter:blur(16px);padding:20px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.3);color:#000}
 img,video{width:100%;max-width:240px;border-radius:16px;margin-top:15px}
-button{margin-top:15px;padding:12px 22px;border:0;border-radius:30px;background:#ff4081;color:#fff;cursor:pointer} /* Button text kept white for contrast */
+button{margin-top:15px;padding:12px 22px;border:0;border-radius:30px;background:#ff4081;color:#000;cursor:pointer}
 </style>
 </head>
 <body>
@@ -74,5 +72,3 @@ document.getElementById("popup").style.display="none";
 </script>
 </body>
 </html>
-
-```
