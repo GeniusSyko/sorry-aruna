@@ -4,205 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sorry Aruna ❤️</title>
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{
-background:linear-gradient(135deg,#ff9eb5,#ffd1dc,#ffe8ef);
-overflow-x:hidden;
-color:#fff;
-}
-
-/* Floating Hearts */
-.hearts{
-position:fixed;
-width:100%;
-height:100%;
-overflow:hidden;
-z-index:-1;
-}
-
-.hearts span{
-position:absolute;
-bottom:-100px;
-font-size:25px;
-animation:float 10s linear infinite;
-opacity:.7;
-}
-
-.hearts span:nth-child(1){left:10%;animation-duration:8s;}
-.hearts span:nth-child(2){left:25%;animation-duration:11s;}
-.hearts span:nth-child(3){left:40%;animation-duration:9s;}
-.hearts span:nth-child(4){left:60%;animation-duration:12s;}
-.hearts span:nth-child(5){left:80%;animation-duration:10s;}
-
-@keyframes float{
-0%{transform:translateY(0) rotate(0);}
-100%{transform:translateY(-120vh) rotate(360deg);}
-}
-
-.hero{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero h1{
-font-size:clamp(34px,9vw,60px);
-text-shadow:2px 2px 10px rgba(0,0,0,.25);
-}
-
-.hero p{
-margin-top:20px;
-font-size:20px;
-animation:bounce 1s infinite;
-}
-
-@keyframes bounce{
-50%{transform:translateY(8px);}
-}
-
-.section{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-.box{
-background:rgba(255,255,255,.25);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,.3);
-padding:18px 35px;
-border-radius:20px;
-font-size:22px;
-cursor:pointer;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-transition:.3s;
-}
-
-.box:hover{
-transform:scale(1.05);
-}
-
-.popup{
-display:none;
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:92%;
-max-width:380px;
-max-height:90vh;
-overflow:auto;
-padding:22px;
-background:rgba(255,255,255,.2);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.3);
-border-radius:25px;
-text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,.3);
-color:white;
-animation:popup .4s ease;
-z-index:1000;
-}
-
-@keyframes popup{
-from{
-opacity:0;
-transform:translate(-50%,-50%) scale(.7);
-}
-to{
-opacity:1;
-transform:translate(-50%,-50%) scale(1);
-}
-}
-
-.popup h2{
-margin-bottom:15px;
-}
-
-.popup p{
-line-height:1.7;
-font-size:17px;
-}
-
-img{
-width:100%;
-max-width:240px;
-margin-top:15px;
-border-radius:18px;
-}
-
-video{
-width:100%;
-margin-top:15px;
-border-radius:18px;
-}
-
-button{
-margin-top:18px;
-padding:12px 24px;
-border:none;
-border-radius:30px;
-background:#ff4081;
-color:#fff;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#ff1e6f;
-}
+background:linear-gradient(135deg,#ff9eb5,#ffdbe7,#fff0f5);
+min-height:100vh;overflow-x:hidden;color:#fff}
+.hearts span{position:fixed;bottom:-40px;font-size:24px;animation:up 10s linear infinite;opacity:.7}
+.hearts span:nth-child(1){left:10%}.hearts span:nth-child(2){left:30%;animation-duration:8s}
+.hearts span:nth-child(3){left:50%;animation-duration:12s}
+.hearts span:nth-child(4){left:70%;animation-duration:9s}
+.hearts span:nth-child(5){left:90%;animation-duration:11s}
+@keyframes up{to{transform:translateY(-120vh) rotate(360deg)}}
+.hero,.section{min-height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;padding:20px;text-align:center}
+.hero h1{font-size:clamp(36px,8vw,60px)}
+.scroll{margin-top:20px;animation:b 1s infinite}
+@keyframes b{50%{transform:translateY(8px)}}
+.box{padding:18px 28px;background:rgba(255,255,255,.25);backdrop-filter:blur(10px);border-radius:18px;cursor:pointer;font-size:22px}
+.popup{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:92%;max-width:380px;max-height:90vh;overflow:auto;background:rgba(255,255,255,.18);backdrop-filter:blur(16px);padding:20px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.3);color:#fff}
+img,video{width:100%;max-width:240px;border-radius:16px;margin-top:15px}
+button{margin-top:15px;padding:12px 22px;border:0;border-radius:30px;background:#ff4081;color:#fff;cursor:pointer}
 </style>
 </head>
-
 <body>
-
 <div class="hearts">
-<span>❤️</span>
-<span>💖</span>
-<span>💕</span>
-<span>💗</span>
-<span>💝</span>
+<span>❤️</span><span>💖</span><span>💕</span><span>💗</span><span>💝</span>
 </div>
 
 <div class="hero">
 <h1>💖 Sorry Aruna 💖</h1>
-<p>⬇ Scroll Down ⬇</p>
+<p class="scroll">⬇ Scroll Down ⬇</p>
 </div>
 
 <div class="section">
-<div class="box" onclick="openPopup()">
-Tap Here ❤️
-</div>
+<div class="box" onclick="openPopup()">Tap Here ❤️</div>
 </div>
 
 <div class="popup" id="popup">
-
-<h2>🥺 I'm Really Sorry Aruna ❤️</h2>
-
+<div style="font-size:70px">🧸</div>
+<h2>I'm Really Sorry Aruna ❤️</h2>
 <p>
-Mera kabhi bhi tujhe dukhi karne ka irada nahi tha. ❤️<br><br>
-
-Bas gusse me maine woh baat bol di aur ab mujhe us baat ka bahut regret hai. 🥺<br><br>
-
-Tu meri sabse pyari sister hai. 💖<br><br>
-
-Please mujhe maaf kar de. 🙏<br><br>
-
-I Promise, aage se gusse me kabhi aisi baat nahi bolunga. ❤️
+Mera kabhi bhi tujhe dukhi karne ka irada nahi tha. 🥺❤️<br><br>
+Bas gusse me maine woh baat bol di aur ab mujhe us baat ka bahut regret hai.<br><br>
+Tu meri sabse pyari sister hai. 💖<br>
+Please mujhe maaf kar de. 🙏🥹<br><br>
+I Promise, aage se gusse me kabhi aisi baat nahi bolunga. ❤️<br><br>
+🥹 Bas ek chhoti si request...
+Jab tumhara mann ho, meri follow request accept kar lena. ❤️🌸
 </p>
 
 <img src="aruna.png" alt="Aruna">
@@ -212,21 +59,16 @@ I Promise, aage se gusse me kabhi aisi baat nahi bolunga. ❤️
 </video>
 
 <button onclick="closePopup()">Close ❤️</button>
-
 </div>
 
 <script>
 function openPopup(){
 document.getElementById("popup").style.display="block";
-setTimeout(()=>{
-alert("🥺 Sorry Aruna ❤️ Please Forgive Me 🙏");
-},300);
+setTimeout(()=>alert("🥺 Sorry Aruna ❤️\nPlease forgive me.\nAur agar mann ho to meri follow request bhi accept kar lena. ❤️"),300);
 }
-
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
 </script>
-
 </body>
 </html>
